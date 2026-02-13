@@ -647,4 +647,70 @@ footer {
   
   .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
   .footer-links { margin-left: 0; }
+
+}
+
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+  /* 1. Fix Hero Section: Stack image on top of text */
+  .hero-layout {
+    flex-direction: column-reverse; /* Puts image above text for better flow */
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Smaller text for mobile screens */
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column; /* Buttons stack on mobile */
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons are easier to tap */
+    justify-content: center;
+  }
+
+  /* 2. Fix Grids: Make cards full width */
+  .cards-grid, .project-grid, .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* 3. Navigation: Hide links initially on mobile */
+  .nav-links {
+    display: none; /* Hidden until menu-toggle is clicked */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff; /* Use your background color */
+    padding: 2rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Shown when JS toggles the 'active' class */
+  }
+
+  .menu-toggle {
+    display: block; /* Show hamburger icon */
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* 4. Hero Image: Scale it down */
+  .hero-image-wrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .profile-frame {
+    width: 250px;
+    height: 250px;
+  }
 }
