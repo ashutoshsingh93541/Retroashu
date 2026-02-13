@@ -7,7 +7,7 @@ Custom Theming: A unique "Retro-Modern" aesthetic using CSS variables and glassm
 Motion Design: * Intersection Observer API: Triggers animations only when elements enter the viewport.Tech Marquee: A seamless, infinite CSS-driven looping animation.Dynamic Progress Bars: Skill levels that animate based on user scroll position.📱 
 Mobile-First: Responsive design ensuring a perfect fit from 4K monitors down to the smallest smartphones.🛠️ 
 The ToolkitCategoryTechnologiesLanguagesHTML5, CSS3, JavaScript (Vanilla ES6+)StylingCustom Properties (Variables), Flexbox, CSS GridIconsFontAwesome 6.0TypographyOrbitron (Gaming/Retro) & Poppins (Modern/Clean)🚀 
-Installation & UsageSince this is a static frontend project, there are no dependencies to install.Clone the repository:Bashgit clone https://github.com/YOUR_USERNAME/retroashu-portfolio.git
+Installation & UsageSince this is a static frontend project, there are no dependencies to install.Clone the repository:Bashgit clone https://github.com/ashutoshsingh93541/retroashu-portfolio.git
 Open the project:Simply double-click index.html or use the "Live Server" extension in VS Code.
 
 📂 Project StructurePlaintext
