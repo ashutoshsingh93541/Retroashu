@@ -721,6 +721,20 @@ footer {
     flex-direction: column; /* Stack stats vertically on small phones */
     gap: 2rem;
   }
+
+  .navbar .cta-btn {
+    display: none;
+  }
+
+  .logo img {
+    width: 160px; /* Reduced from 200px */
+  }
+
+  /* Ensure the navbar items are vertically centered */
+  .navbar {
+    padding: 0.8rem 5%;
+    align-items: center;
+  }
 }
 @media (max-width: 480px) {
   .floating-icon {
@@ -738,5 +752,13 @@ footer {
   }
 }
 
+.mobile-only {
+  display: none; /* Hidden on Desktop */
+}
 
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block; /* Visible in the mobile menu dropdown */
+  }
+}
 
