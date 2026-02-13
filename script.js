@@ -83,4 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     if(skillsSection) skillsObserver.observe(skillsSection);
+
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Change icon from bars to X
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
 });
