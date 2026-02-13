@@ -51,6 +51,7 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   line-height: 1.6;
+  font-display: swap;
 }
 
 /* --- Preloader --- */
@@ -761,4 +762,5 @@ footer {
     display: block; /* Visible in the mobile menu dropdown */
   }
 }
+
 
