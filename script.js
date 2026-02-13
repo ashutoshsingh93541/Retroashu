@@ -2,30 +2,58 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Preloader Removal
     const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            preloader.style.opacity = '0';
+    if (preloader) {
+        window.addEventListener('load', () => {
             setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
-        }, 1500); // 1.5s delay to see animation
-    });
-
-    // 2. Custom Scroll Progress Bar
-    window.onscroll = function() { updateScrollProgress() };
-
-    function updateScrollProgress() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000); 
+        });
     }
 
-    // 3. Reveal Animation on Scroll (Intersection Observer)
-    const observerOptions = {
-        threshold: 0.1
-    };
+    // 2. Mobile Menu Logic (Moved inside for safety)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
 
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+            
+            // Prevent scrolling when menu is open on mobile
+            body.classList.toggle('no-scroll');
+        });
+
+        // Close menu when clicking a link (Crucial for mobile UX)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+                body.classList.remove('no-scroll');
+            });
+        });
+    }
+
+    // 3. Custom Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        const myBar = document.getElementById("myBar");
+        if (myBar) myBar.style.width = scrolled + "%";
+    });
+
+    // 4. Reveal & Animations Setup
+    const observerOptions = { threshold: 0.1 };
+
+    // Card Reveals
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -34,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal-card').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-card, .project-card, .glass-card').forEach(el => observer.observe(el));
 
-    // 4. Stats Counter Animation
+    // 5. Stats Counter Animation
     const statsSection = document.getElementById('stats-section');
     let statsAnimated = false;
 
@@ -66,15 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(statsSection) statsObserver.observe(statsSection);
 
-    // 5. Skill Bars Animation
+    // 6. Skill Bars Animation
     const skillsSection = document.getElementById('skills');
-    
     const skillsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const progressLines = document.querySelectorAll('.progress-line span');
                 progressLines.forEach(line => {
-                    // Get width from parent data attribute or CSS variable logic
                     const width = line.parentElement.getAttribute('data-width');
                     line.style.width = width;
                 });
@@ -83,16 +109,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     if(skillsSection) skillsObserver.observe(skillsSection);
-
-});
-
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Change icon from bars to X
-    const icon = menuToggle.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-xmark');
 });
