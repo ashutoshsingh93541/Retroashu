@@ -631,25 +631,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hero-layout, .contact-layout {
-    flex-direction: column;
-  }
-  
-  .hero-content { text-align: center; }
-  .hero-buttons { justify-content: center; }
-  
-  .profile-frame { width: 280px; height: 280px; margin: 0 auto; }
-  
-  .nav-links { display: none; } /* Add JS Toggle for mobile later */
-  .menu-toggle { display: block; cursor: pointer;}
-  
-  .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
-  .footer-links { margin-left: 0; }
-
-}
-
 /* --- Mobile Responsive Fixes --- */
 @media (max-width: 768px) {
   /* 1. Fix Hero Section: Stack image on top of text */
@@ -682,15 +663,24 @@ footer {
 
   /* 3. Navigation: Hide links initially on mobile */
   .nav-links {
-    display: none; /* Hidden until menu-toggle is clicked */
+    display: none; 
     flex-direction: column;
-    position: absolute;
-    top: 100%;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 70px;      /* Matches header height */
     left: 0;
     width: 100%;
-    background: #fff; /* Use your background color */
-    padding: 2rem;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    height: calc(100vh - 70px); /* Fill the rest of the screen */
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    padding: 3rem 2rem;
+    z-index: 999;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem; /* Larger tap targets for fingers */
+    font-family: var(--font-display);
   }
 
   .nav-links.active {
@@ -713,4 +703,40 @@ footer {
     width: 250px;
     height: 250px;
   }
+
+  section { 
+    padding: 60px 0; 
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-wrapper {
+    grid-template-columns: 1fr !important; /* Force single column */
+    gap: 2rem;
+  }
+
+  .stats-container {
+    flex-direction: column; /* Stack stats vertically on small phones */
+    gap: 2rem;
+  }
 }
+@media (max-width: 480px) {
+  .floating-icon {
+    display: none; /* Icons often clutter very small screens */
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+
+
