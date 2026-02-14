@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Mobile Menu Logic (Moved inside for safety)
+    // 2. Mobile Menu Logic
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
@@ -24,12 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const icon = menuToggle.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
-            
-            // Prevent scrolling when menu is open on mobile
             body.classList.toggle('no-scroll');
         });
 
-        // Close menu when clicking a link (Crucial for mobile UX)
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -50,11 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (myBar) myBar.style.width = scrolled + "%";
     });
 
-    // 4. Reveal & Animations Setup
+    // 4. Intersection Observers
     const observerOptions = { threshold: 0.1 };
 
-    // Card Reveals
-    const observer = new IntersectionObserver((entries) => {
+    // General Reveals
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal-active');
@@ -62,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal-card, .project-card, .glass-card').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-card, .project-card, .glass-card').forEach(el => revealObserver.observe(el));
 
-    // 5. Stats Counter Animation
+    // Stats Counter
     const statsSection = document.getElementById('stats-section');
     let statsAnimated = false;
 
@@ -75,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 counters.forEach(counter => {
                     const target = +counter.getAttribute('data-target');
                     const increment = target / 50; 
-                    
                     const updateCounter = () => {
                         const c = +counter.innerText;
                         if(c < target) {
@@ -94,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(statsSection) statsObserver.observe(statsSection);
 
-    // 6. Skill Bars Animation
+    // Skill Bars
     const skillsSection = document.getElementById('skills');
     const skillsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -111,30 +107,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if(skillsSection) skillsObserver.observe(skillsSection);
 });
 
+// 5. Particle Background Logic
 const canvas = document.getElementById('particleCanvas');
 const ctx = canvas.getContext('2d');
 
 let particles = [];
-const mouse = { x: null, y: null, radius: 150 }; // Interaction radius
+const mouse = { x: null, y: null, radius: 150 };
 
 window.addEventListener('mousemove', (e) => {
     mouse.x = e.x;
     mouse.y = e.y;
 });
 
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
-});
-
 class Particle {
     constructor() {
+        this.initParticle();
+    }
+
+    initParticle() {
+        const heroSection = document.querySelector('.hero');
+        const h = heroSection ? heroSection.offsetHeight : window.innerHeight;
+        
         this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.baseX = this.x;
-        this.baseY = this.y;
+        this.y = Math.random() * h;
+        
+        const isMobile = window.innerWidth < 768;
+        // Optimization: Smaller particles on mobile for clarity
+        this.size = isMobile ? Math.random() * 1.5 + 0.5 : Math.random() * 2 + 1;
+        
         this.density = (Math.random() * 30) + 1;
         this.vx = (Math.random() - 0.5) * 0.8;
         this.vy = (Math.random() - 0.5) * 0.8;
@@ -149,17 +149,14 @@ class Particle {
     }
 
     update() {
-        // Movement
         this.x += this.vx;
         this.y += this.vy;
 
-        // Screen Wrap
         if (this.x > canvas.width) this.x = 0;
         else if (this.x < 0) this.x = canvas.width;
         if (this.y > canvas.height) this.y = 0;
         else if (this.y < 0) this.y = canvas.height;
 
-        // Mouse Interaction (Magnetism)
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
         let distance = Math.sqrt(dx * dx + dy * dy);
@@ -177,24 +174,36 @@ class Particle {
     }
 }
 
-function init() {
+function initParticles() {
+    const heroSection = document.querySelector('.hero');
+    if (!heroSection) return;
+
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Pushes particles to only hero background
+    canvas.height = heroSection.offsetHeight; 
+
+    // Optimization: Reduce particle count on mobile for performance
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile ? 40 : 100; 
+
     particles = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < count; i++) {
         particles.push(new Particle());
     }
 }
 
 function connect() {
+    const isMobile = window.innerWidth < 768;
+    const maxDistance = isMobile ? 100 : 150; // Shorter lines on mobile
+
     for (let a = 0; a < particles.length; a++) {
         for (let b = a; b < particles.length; b++) {
             let dx = particles[a].x - particles[b].x;
             let dy = particles[a].y - particles[b].y;
             let distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 150) {
-                let opacity = 1 - (distance / 150);
+            if (distance < maxDistance) {
+                let opacity = 1 - (distance / maxDistance);
                 ctx.strokeStyle = `rgba(59, 82, 255, ${opacity * 0.2})`;
                 ctx.lineWidth = 1;
                 ctx.beginPath();
@@ -216,6 +225,8 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-init();
-animate();
+window.addEventListener('resize', initParticles);
 
+// Final Execution
+initParticles();
+animate();
