@@ -1,286 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Retroashu - Gaming Content Creator & Tech Enthusiast. Creating viral gaming edits, montages and helping creators grow.">
-  <title>Retroashu | Gaming Creator</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#0a0a0a">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retroashu - Gaming Creator & Tech Enthusiast. Level up your content with editing tips, gear setups, and nostalgic gaming vibes.">
+    <meta name="theme-color" content="#7000ff"> <title>Retroashu | Level Up Your Creator Game</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="preloader">
-  <div class="loader-content">
-    <div class="controller-icon"><i class="fa-solid fa-gamepad"></i></div>
-    <h2 class="neon-text">RETROASHU</h2>
-    <div class="loading-bar"><div class="bar-fill"></div></div>
-  </div>
-</div>
-
-<div class="scroll-progress-container">
-  <div class="scroll-progress-bar" id="myBar"></div>
-</div>
-
-<div class="top-bar">
-  <div class="container top-bar-content">
-    <div class="contact-info">
-      <span><i class="fa-solid fa-envelope"></i> ashutoshsingh93541@gmail.com</span>
-    </div>
-    <div class="social-links">
-      <a href="https://github.com/ashutoshsingh93541" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ashutosh-singh-2380ba2b1/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/retroashu/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </div>
-</div>
-
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="#"><img src="images/logo.png" alt="Retroashu Logo"></a>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Content</a></li>
-      <li><a href="#creators" class="nav-link">Creators</a></li>
-      <li class="mobile-only"><a href="#contact" class="nav-link">Connect</a></li>
-    </ul>
-
-    <a href="#contact" class="cta-btn">Connect <i class="fa-solid fa-arrow-right"></i></a>
-
-    <div class="menu-toggle">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero" id="home">
-  <canvas id="particleCanvas"></canvas>
-  <div class="container hero-layout">
-    <div class="hero-content">
-      <div class="hello-badge">
-        <span class="wave">🎮</span>
-        <span>Hey! I am Retroashu</span>
-      </div>
-
-      <h1>Crafting <span class="gradient-text">Gaming</span><br> Experiences</h1>
-      <p class="role">Gaming Content Creator | Tech Explorer</p>
-      <p class="tagline">
-        I turn raw gameplay into cinematic edits and viral montages. From clutch moments to smooth transitions — this is where gaming meets creativity.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">Watch My Content <i class="fa-solid fa-arrow-right-long"></i></a>
-        <a href="#creators" class="btn secondary">For Creators <i class="fa-solid fa-users"></i></a>
-      </div>
-    </div>
-
-    <div class="hero-image-wrapper">
-      <div class="profile-frame">
-        <img src="images/profilenew.png" alt="Retroashu" class="profile-img">
-      </div>
-      <div class="floating-icon icon-1"><i class="fa-brands fa-playstation"></i></div>
-      <div class="floating-icon icon-2"><i class="fa-brands fa-steam"></i></div>
-    </div>
-  </div>
-</section>
-
-<div class="tech-marquee">
-  <div class="marquee-content">
-    <span>🎮 Gaming</span>
-    <span>✂ Editing</span>
-    <span>📱 Reels</span>
-    <span>🔥 Montages</span>
-    <span>🚀 Growth</span>
-    <span>🎮 Gaming</span>
-    <span>✂ Editing</span>
-    <span>📱 Reels</span>
-    <span>🔥 Montages</span>
-    <span>🚀 Growth</span>
-  </div>
-</div>
-
-<section class="why-hire">
-  <div class="container">
-    <h2 class="section-title">Why Follow Me?</h2>
-    <div class="cards-grid">
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
-        <h3>Epic Edits</h3>
-        <p>High-energy gaming montages with beat sync and cinematic cuts.</p>
-      </div>
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-        <h3>Tech + Gaming</h3>
-        <p>Using tech tools and AI to create better gaming content.</p>
-      </div>
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
-        <h3>Creator Growth</h3>
-        <p>Focused on improving skills and helping other creators win.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="about" class="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-      I am <strong>Ashutosh Singh</strong>, also known as <strong>Retroashu</strong> — a gaming content creator and tech enthusiast.
-      I create viral gaming clips, montages, and edits for Instagram.  
-      When I’m not gaming, I explore AI, tech tools, and editing techniques to upgrade content quality.
-    </p>
-  </div>
-</section>
-
-<section id="skills" class="skills">
-  <div class="container">
-    <h2 class="section-title">Creator Skills</h2>
-
-    <div class="skills-wrapper">
-      <div class="skill-card">
-        <h3><i class="fa-solid fa-video"></i> Editing</h3>
-        <div class="skill-bar-wrapper">
-          <div class="skill-info"><span>Gameplay Editing</span><span>95%</span></div>
-          <div class="progress-line" data-width="95%"><span></span></div>
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="controller-icon"><i class="fa-solid fa-headset"></i></div>
+            <h2 class="neon-text">LOADING SESSION...</h2>
+            <div class="loading-bar"><div class="bar-fill"></div></div>
         </div>
-        <div class="skill-bar-wrapper">
-          <div class="skill-info"><span>Montage Sync</span><span>90%</span></div>
-          <div class="progress-line" data-width="90%"><span></span></div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3><i class="fa-solid fa-chart-line"></i> Growth</h3>
-        <div class="skill-bar-wrapper">
-          <div class="skill-info"><span>Reel Optimization</span><span>85%</span></div>
-          <div class="progress-line" data-width="85%"><span></span></div>
-        </div>
-        <div class="skill-bar-wrapper">
-          <div class="skill-info"><span>Trend Research</span><span>80%</span></div>
-          <div class="progress-line" data-width="80%"><span></span></div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
 
-<section id="projects" class="projects">
-  <div class="container">
-    <h2 class="section-title">Featured Content</h2>
-
-    <div class="project-grid">
-
-      <article class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-video"></i>
+    <aside class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fa-solid fa-bolt"></i> Join the <strong>#RetroSquad</strong> Community</span>
+            </div>
+            <nav class="social-links" aria-label="Social Links">
+                <a href="https://www.instagram.com/retroashu/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+            </nav>
         </div>
-        <div class="project-info">
-          <h3>Instagram Gaming Clips</h3>
-          <p>Short-form viral gaming edits and reels.</p>
-          <a href="https://instagram.com/retroashu" class="btn-sm">View Content</a>
+    </aside>
+
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="#home"><img src="images/logo.png" alt="Retroashu Logo"></a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#vault" class="nav-link">The Vault (Tips)</a></li>
+                <li><a href="#setup" class="nav-link">Gear</a></li>
+                <li><a href="#gallery" class="nav-link">Montages</a></li>
+                <li class="mobile-only"><a href="#contact" class="nav-link">Collaborate</a></li>
+            </ul>
+
+            <a href="#contact" class="cta-btn">Collaborate <i class="fa-solid fa-gamepad"></i></a>
+
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <canvas id="particleCanvas"></canvas> 
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <div class="hello-badge">
+                        <span class="wave">🎮</span> 
+                        <span>Press Start: I am Retroashu</span>
+                    </div>
+                    
+                    <h1>Level Up Your <span class="gradient-text">Content</span> <br> Creation</h1>
+                    <p class="role">Gaming Creator | Video Editor | Tech Enthusiast</p>
+                    <p class="tagline">
+                        Helping you bridge the gap between "just playing" and "pro creating." Master the algorithms, the edits, and the setup.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#vault" class="btn primary">Start Creating <i class="fa-solid fa-rocket"></i></a>
+                        <a href="https://www.instagram.com/retroashu/" target="_blank" class="btn secondary">Follow the Feed</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="profile-frame">
+                        <img src="images/profilenew.png" alt="Retroashu Gaming Setup" class="profile-img">
+                    </div>
+                    <div class="floating-icon icon-1"><i class="fa-solid fa-clapperboard"></i></div>
+                    <div class="floating-icon icon-2"><i class="fa-solid fa-pumping-iron"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tech-marquee" aria-hidden="true">
+            <div class="marquee-content">
+                <span>PC GAMING</span>
+                <span>MOBILE EDITING</span>
+                <span>NOSTALGIA</span>
+                <span>MONTAGE TIPS</span>
+                <span>SETUP DESIGN</span>
+                <span>CONTENT STRATEGY</span>
+                <span>PC GAMING</span>
+                <span>MOBILE EDITING</span>
+                <span>NOSTALGIA</span>
+                <span>MONTAGE TIPS</span>
+                <span>SETUP DESIGN</span>
+                <span>CONTENT STRATEGY</span>
+            </div>
         </div>
-      </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-film"></i>
+        <section id="vault" class="why-hire">
+            <div class="container">
+                <h2 class="section-title">The Creator Vault</h2>
+                <div class="cards-grid">
+                    <article class="glass-card reveal-card">
+                        <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Editing Masterclass</h3>
+                        <p>The best software for PC (Premiere/Davinci) and Mobile (CapCut/VN). Learn the "Retro" edit style.</p>
+                        <a href="#" class="link-btn">Read Guides</a>
+                    </article>
+                    <article class="glass-card reveal-card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Algorithm Hacks</h3>
+                        <p>Best times to post reels, how to use trending audio, and storytelling in 60 seconds.</p>
+                        <a href="#" class="link-btn">Growth Tips</a>
+                    </article>
+                    <article class="glass-card reveal-card">
+                        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Gaming News</h3>
+                        <p>Stay updated with the latest in esports, new releases, and tech leaks.</p>
+                        <a href="#" class="link-btn">View Updates</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup" class="skills">
+            <div class="container">
+                <h2 class="section-title">My Battle Station</h2>
+                <div class="skills-wrapper">
+                    <div class="skill-card">
+                        <h3><i class="fa-solid fa-desktop"></i> PC Specs</h3>
+                        <ul class="setup-list">
+                            <li><strong>GPU:</strong> RTX 30-Series (Edit Ready)</li>
+                            <li><strong>Monitor:</strong> 144Hz IPS Panel</li>
+                            <li><strong>Peripheral:</strong> Mechanical Retro-style Keyboard</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fa-solid fa-mobile-screen"></i> Mobile Gear</h3>
+                        <ul class="setup-list">
+                            <li><strong>Device:</strong> High-Refresh Rate Smartphone</li>
+                            <li><strong>Tools:</strong> External Mic & Stabilizers</li>
+                            <li><strong>Apps:</strong> CapCut / Lightroom Mobile</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="projects">
+            <div class="container">
+                <h2 class="section-title">Nostalgic Montages</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                           <i class="fa-solid fa-play-circle"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Nostalgic Feels Edit</h3>
+                            <p>Bringing back the golden age of gaming through cinematic transitions.</p>
+                            <div class="tech-tags">
+                                <span>After Effects</span><span>Vibes</span>
+                            </div>
+                            <a href="https://www.instagram.com/retroashu/" target="_blank" class="btn-sm">Watch Reel <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                           <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>High-Octane Montage</h3>
+                            <p>Fast-paced gaming clips synced to the beat. Learn how I sync audio.</p>
+                            <div class="tech-tags">
+                                <span>CapCut</span><span>Syncing</span>
+                            </div>
+                            <a href="https://www.instagram.com/retroashu/" target="_blank" class="btn-sm">Watch Reel <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Build Something</h2>
+                <div class="contact-layout">
+                    <div class="contact-left">
+                        <h3>Collaborate with Retroashu</h3>
+                        <p>Looking for an editor? Want to sponsor a video? Or just need setup advice? Drop a message below.</p>
+                        <div class="info-card">
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://instagram.com/Retroashu">DM on Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-right">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" required placeholder=" ">
+                                <label for="name">Gamertag / Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required placeholder=" ">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" rows="5" required placeholder=" "></textarea>
+                                <label for="message">What's on your mind?</label>
+                            </div>
+                            <button type="submit" class="btn primary">Send Signal <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.PNG" alt="Retroashu Logo" class="footer-img-logo">
+            </div>
+            <div class="copyright">
+                <p>© 2026 Retroashu | Keep Gaming, Keep Creating</p>
+            </div>
+            <nav class="footer-links">
+                <a href="#">Setup Guide</a>
+                <a href="#">Brand Assets</a>
+            </nav>
         </div>
-        <div class="project-info">
-          <h3>Cinematic Montages</h3>
-          <p>High-quality gaming montage videos.</p>
-          <a href="https://instagram.com/retroashu" class="btn-sm">Watch</a>
-        </div>
-      </article>
+    </footer>
 
-    </div>
-  </div>
-</section>
-
-<section id="creators" class="creators">
-  <div class="container">
-    <h2 class="section-title">For Creators</h2>
-    <div class="cards-grid">
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
-        <h3>How to Shoot</h3>
-        <p>Best settings, FPS, and recording tips for smooth gameplay.</p>
-      </div>
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-scissors"></i></div>
-        <h3>How to Edit</h3>
-        <p>Editing tricks for engaging and viral gaming reels.</p>
-      </div>
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-upload"></i></div>
-        <h3>How to Upload</h3>
-        <p>Captions, hashtags, and posting strategy.</p>
-      </div>
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
-        <h3>Content Ideas</h3>
-        <p>How to find viral gaming moments and trends.</p>
-      </div>
-
-      <div class="glass-card reveal-card">
-        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Grow Faster</h3>
-        <p>Consistency plans and growth mindset tips.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <h2 class="section-title">Creator Connect</h2>
-
-    <form class="contact-form">
-      <h3>Let’s Build Your Gaming Brand</h3>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button type="submit" class="btn primary">Send Message</button>
-    </form>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container footer-content">
-    <div class="footer-logo">
-      <img src="images/logo.PNG" alt="Logo" class="footer-img-logo">
-    </div>
-    <div class="copyright">
-      <p>© 2026 Retroashu | Gaming • Tech • Creativity 🎮</p>
-    </div>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
