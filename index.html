@@ -3,245 +3,613 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Retroashu - Gaming Creator & Tech Enthusiast. Level up your content with editing tips, gear setups, and nostalgic gaming vibes.">
-    <meta name="theme-color" content="#7000ff"> <title>Retroashu | Level Up Your Creator Game</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <title>Retro Ashu | Gaming Setup & Content Creator</title>
+    <meta name="title" content="Retro Ashu | Gaming Setup & Content Creator">
+    <meta name="description" content="I help gamers bridge the gap between 'just playing' and 'pro creating.' Get the setups, cinematic edits, and growth strategy to go viral.">
+    <meta name="author" content="Retro Ashu">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:title" content="Retro Ashu | Gaming Setup & Content Creator">
+    <meta property="og:description" content="I help gamers bridge the gap between 'just playing' and 'pro creating.' Get the setups, cinematic edits, and growth strategy to go viral.">
+    <meta property="og:image" content="https://www.yourdomain.com/images/profile.jpeg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourdomain.com/">
+    <meta property="twitter:title" content="Retro Ashu | Gaming Setup & Content Creator">
+    <meta property="twitter:description" content="Get the setups, cinematic edits, and growth strategy to go viral.">
+    <meta property="twitter:image" content="https://www.yourdomain.com/images/profile.jpeg">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#6645f8"> <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
-
-    <div id="preloader">
-        <div class="loader-content">
-            <div class="controller-icon"><i class="fa-solid fa-headset"></i></div>
-            <h2 class="neon-text">LOADING SESSION...</h2>
-            <div class="loading-bar"><div class="bar-fill"></div></div>
-        </div>
+    <!-- Topbar starts -->
+    <div class="topbar">
+        <p>ashutoshsingh93541@gmail.com</p>
+        <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
     </div>
+    </div>
+    <!-- Topbar Ends -->
 
-    <aside class="top-bar">
-        <div class="container top-bar-content">
-            <div class="contact-info">
-                <span><i class="fa-solid fa-bolt"></i> Join the <strong>#RetroSquad</strong> Community</span>
-            </div>
-            <nav class="social-links" aria-label="Social Links">
-                <a href="https://www.instagram.com/retroashu/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a>
-                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
-            </nav>
-        </div>
-    </aside>
-
+    <!-- Header Section Starts -->
     <header>
-        <nav class="navbar container">
-            <div class="logo">
-                <a href="#home"><img src="images/logo.png" alt="Retroashu Logo"></a>
+    <nav class="navbar">
+        <a href="#home"><img src="images/logo.png" alt="RetroAshu Logo" width="200"></a>
+        
+        <ul class="social" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#viral-reels">Showcase</a></li>
+            <li><a href="#creator-tips">Creator Tips</a></li>
+            <li><a href="#tech-gear">Gear & PC Build</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="menu-toggle">
+                <a href="#contact">Collaborate <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#vault" class="nav-link">The Vault (Tips)</a></li>
-                <li><a href="#setup" class="nav-link">Gear</a></li>
-                <li><a href="#gallery" class="nav-link">Montages</a></li>
-                <li class="mobile-only"><a href="#contact" class="nav-link">Collaborate</a></li>
-            </ul>
-
-            <a href="#contact" class="cta-btn">Collaborate <i class="fa-solid fa-gamepad"></i></a>
-
-            <button class="menu-toggle" aria-label="Toggle Navigation">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+<!-- Header Section Ends -->
 
-    <main>
-        <section class="hero" id="home">
-            <canvas id="particleCanvas"></canvas> 
-            <div class="container hero-layout">
-                <div class="hero-content">
-                    <div class="hello-badge">
-                        <span class="wave">🎮</span> 
-                        <span>Press Start: I am Retroashu</span>
-                    </div>
-                    
-                    <h1>Level Up Your <span class="gradient-text">Content</span> <br> Creation</h1>
-                    <p class="role">Gaming Creator | Video Editor | Tech Enthusiast</p>
-                    <p class="tagline">
-                        Helping you bridge the gap between "just playing" and "pro creating." Master the algorithms, the edits, and the setup.
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#vault" class="btn primary">Start Creating <i class="fa-solid fa-rocket"></i></a>
-                        <a href="https://www.instagram.com/retroashu/" target="_blank" class="btn secondary">Follow the Feed</a>
-                    </div>
-                </div>
+<!-- Hero Section Starts  -->
+    <section  class="hero" id="home">
+        <div id="particles-js"></div>
+        <div class="greet">
+            <p><img src="images/hand.png" alt="hand-icon" width="20px"> RetroAshu is Online.</p>
+        </div>
+        <div class="hero-content">
+       <h1 class="tagline">Designed for <span>Gamers.</span> <br>Built for <span>Creators.</span></h1>
+       <p>I help gamers bridge the gap between "just playing" and "pro creating." 
+        Get the setups, the edits, and the strategy to go viral.</p>
+        <a href="#contact">Let's Collaborate <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#showcase">Know More</a>
+        </div>
+        <div class="hero-visual">
+            <img src="images/profile.jpeg" alt="Retroashu Profile">
+        </div>
+        <div class="float-card tag-1">
+    <div class="icon-circle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    <div class="tag-text">
+        <span><strong>3M+</strong> Views</span>
+    </div>
+</div>
 
-                <div class="hero-image-wrapper">
-                    <div class="profile-frame">
-                        <img src="images/profilenew.png" alt="Retroashu Gaming Setup" class="profile-img">
-                    </div>
-                    <div class="floating-icon icon-1"><i class="fa-solid fa-clapperboard"></i></div>
-                    <div class="floating-icon icon-2"><i class="fa-solid fa-pumping-iron"></i></div>
+<div class="float-card tag-2">
+    <div class="icon-circle"><i class="fa-solid fa-arrow-trend-up"></i></div>
+    <div class="tag-text">
+        <span><strong>100+</strong> Creations</span>
+    </div>
+</div>
+    </section>
+<!-- Hero Section Ends -->
+
+    <!-- Marqee Section Starts -->
+    <section class="marquee-section" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>GAMING SETUP</span> <i class="fa-solid fa-star"></i>
+                    <span>CINEMATIC EDITING</span> <i class="fa-solid fa-star"></i>
+                    <span>TECH REVIEWS</span> <i class="fa-solid fa-star"></i>
+                    <span>PC BUILDING</span> <i class="fa-solid fa-star"></i>
+                    <span>GROWTH HACKS</span> <i class="fa-solid fa-star"></i>
+                    <span>GAMING SETUP</span> <i class="fa-solid fa-star"></i>
+                    <span>CINEMATIC EDITING</span> <i class="fa-solid fa-star"></i>
+                    <span>TECH REVIEWS</span> <i class="fa-solid fa-star"></i>
+                    <span>PC BUILDING</span> <i class="fa-solid fa-star"></i>
+                    <span>GROWTH HACKS</span> <i class="fa-solid fa-star"></i>
                 </div>
             </div>
         </section>
+<!-- Marquee Section Ends -->
 
-        <div class="tech-marquee" aria-hidden="true">
-            <div class="marquee-content">
-                <span>PC GAMING</span>
-                <span>MOBILE EDITING</span>
-                <span>NOSTALGIA</span>
-                <span>MONTAGE TIPS</span>
-                <span>SETUP DESIGN</span>
-                <span>CONTENT STRATEGY</span>
-                <span>PC GAMING</span>
-                <span>MOBILE EDITING</span>
-                <span>NOSTALGIA</span>
-                <span>MONTAGE TIPS</span>
-                <span>SETUP DESIGN</span>
-                <span>CONTENT STRATEGY</span>
+<!-- Viral Reel Section Starts -->
+ <section id="viral-reels" class="section-padding bg-light">
+    <div class="container-fluid">
+        <div class="section-header center-text">
+            <h2>Viral <span>Showcase</span></h2>
+            <p>Breakdowns of my highest-performing Instagram Reels.</p>
+        </div>
+
+        <div class="reels-slider-container">
+            <div class="slider-track" id="reels-slider">
+                
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/kratos.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Revenge meets Vengeance</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 450K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/creed.png" alt="PC Build transition" loading="lazy">
+                        <div class="card-overlay"></div>
+                        <button class="play-overlay js-open-modal" data-video-src="videos/reel2.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>The Ultimate Transition</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 263K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/forza.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div>
+                        <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Winds meet Cars</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 553K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/wukong.png" alt="PC Build transition" loading="lazy">
+                        <div class="card-overlay"></div>
+                        <button class="play-overlay js-open-modal" data-video-src="videos/reel2.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>The Myth of Wukong</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 1.2M</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/kratos.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Bond of Kratos & Atreus</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 800K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/gta.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>GTA VI Cinematic Clip</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 1.4M</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/redemption.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Unreal Graphics of RDR</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 150K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/wukong.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Black Myth Status</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 100K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/forza.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Hotwheels In Forza</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 450K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumbnail">
+                        <img src="images/kratos.png" alt="Cinematic gaming edit" loading="lazy">
+                        <div class="card-overlay"></div> <button class="play-overlay js-open-modal" data-video-src="videos/reel1.mp4"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="reel-info">
+                        <h3>Kratos Vs Thunder God</h3>
+                        <div class="reel-meta">
+                            <span class="reel-stats"><i class="fa-solid fa-eye"></i> 250K</span>
+                            <a href="#" target="_blank" class="ig-redirect"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+        </div>
+        
+        <div id="video-modal" class="modal hidden" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <video id="modal-video-player" controls></video>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Viral Reel Section Ends -->
+
+ <!-- Creator Hub Section Starts -->
+  <section id="creator-tips" class="section-padding bg-light-gray">
+    <div class="container">
+        <div class="section-header center-text">
+            <h2>Creator <span>University</span></h2>
+            <p>Master the algorithm and the art of creation with these core strategies.</p>
+        </div>
+
+        <div class="grid-4"> 
+    <article class="info-card">
+        <span class="card-badge trending">Trending</span>
+        <div class="icon-box"><i class="fa-solid fa-film"></i></div>
+        <h3>Cinematic Visuals</h3>
+        <p>Learn to use deep color grading, motion blur, and game engine tricks to make your standard gameplay look like a movie.</p>
+        <a href="#read-more" class="link-arrow">Editing Guide <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+
+    <article class="info-card">
+        <span class="card-badge new">New</span>
+        <div class="icon-box"><i class="fa-solid fa-share-nodes"></i></div>
+        <h3>Smart Posting</h3>
+        <p>Timing matters. Learn the ideal upload schedule, how to craft engaging captions, and why the first 10 minutes matter.</p>
+        <a href="#read-more" class="link-arrow">Algorithm Secrets <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+
+    <article class="info-card">
+        <span class="card-badge pro">Pro Tip</span>
+        <div class="icon-box"><i class="fa-solid fa-hashtag"></i></div>
+        <h3>The Hashtag Ladder</h3>
+        <p>Stop spamming. Use the "Ladder Strategy": 3 broad gaming tags, 5 niche tags, and 2 custom brand tags for maximum reach.</p>
+        <a href="#read-more" class="link-arrow">Get the List <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+
+    <article class="info-card">
+        <span class="card-badge hot">Hot</span>
+        <div class="icon-box"><i class="fa-solid fa-anchor"></i></div>
+        <h3>3-Second Hooks</h3>
+        <p>If they don't stop scrolling in 3 seconds, you lost. Master visual hooks and sound effects that force viewers to keep watching.</p>
+        <a href="#read-more" class="link-arrow">Hook Ideas <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+
+    <article class="info-card">
+        <span class="card-badge pro">Pro Tip</span>
+        <div class="icon-box"><i class="fa-solid fa-users"></i></div>
+        <h3>Community First</h3>
+        <p>As a small creator, your superpower is connection. Reply to every comment, host community lobbies, and turn casual viewers into loyal fans.</p>
+        <a href="#read-more" class="link-arrow">Community Guide <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+
+    <article class="info-card">
+        <span class="card-badge new">New</span>
+        <div class="icon-box"><i class="fa-solid fa-crosshairs"></i></div>
+        <h3>Niche Down to Blow Up</h3>
+        <p>Don't play 5 different games a week. Pick one specific game, master it, and become the go-to creator for that audience before expanding.</p>
+        <a href="#read-more" class="link-arrow">Finding Your Niche <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+</div>
+    </div>
+</section>
+  <!-- Creator Hub Section Ends -->
+
+  <!-- Build section starts -->
+   <section id="tech-gear" class="section-padding bg-light-gray">
+    <div class="container">
+        <div class="section-header center-text">
+            <h2>Ultimate <span>PC Builds</span></h2>
+            <p>Whether you're starting out or rendering 4K edits, here are the exact specs I recommend right now.</p>
+        </div>
+
+        <div class="build-tier">
+            <h3 class="tier-title"><i class="fa-solid fa-gamepad"></i> Budget Gaming Tier</h3>
+            
+            <div class="build-grid">
+                <article class="build-card">
+                    <div class="card-header amd-theme">
+                        <h4>AMD Team Red</h4>
+                        <span class="price">~₹75,000</span>
+                    </div>
+                    <ul class="specs-list">
+                        <li><i class="fa-solid fa-microchip"></i> <strong>CPU:</strong> Ryzen 5 7600</li>
+                        <li><i class="fa-solid fa-vr-cardboard"></i> <strong>GPU:</strong> Radeon RX 7600 8GB</li>
+                        <li><i class="fa-solid fa-memory"></i> <strong>RAM:</strong> 16GB DDR5-5200</li>
+                        <li><i class="fa-solid fa-hard-drive"></i> <strong>Storage:</strong> 1TB Gen4 NVMe SSD</li>
+                        <li><i class="fa-solid fa-server"></i> <strong>Mobo:</strong> B650M Motherboard</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="benchmarks.html" class="details-link">Benchmarks & Pros/Cons <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="build-card">
+                    <div class="card-header intel-theme">
+                        <h4>Intel Team Blue</h4>
+                        <span class="price">~₹80,000</span>
+                    </div>
+                    <ul class="specs-list">
+                        <li><i class="fa-solid fa-microchip"></i> <strong>CPU:</strong> Core i5-13400F</li>
+                        <li><i class="fa-solid fa-vr-cardboard"></i> <strong>GPU:</strong> RTX 4060 8GB</li>
+                        <li><i class="fa-solid fa-memory"></i> <strong>RAM:</strong> 16GB DDR5-5200</li>
+                        <li><i class="fa-solid fa-hard-drive"></i> <strong>Storage:</strong> 1TB Gen4 NVMe SSD</li>
+                        <li><i class="fa-solid fa-server"></i> <strong>Mobo:</strong> B760M Motherboard</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="benchmarks.html" class="details-link">Benchmarks & Pros/Cons <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
         </div>
 
-        <section id="vault" class="why-hire">
-            <div class="container">
-                <h2 class="section-title">The Creator Vault</h2>
-                <div class="cards-grid">
-                    <article class="glass-card reveal-card">
-                        <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                        <h3>Editing Masterclass</h3>
-                        <p>The best software for PC (Premiere/Davinci) and Mobile (CapCut/VN). Learn the "Retro" edit style.</p>
-                        <a href="#" class="link-btn">Read Guides</a>
-                    </article>
-                    <article class="glass-card reveal-card">
-                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>Algorithm Hacks</h3>
-                        <p>Best times to post reels, how to use trending audio, and storytelling in 60 seconds.</p>
-                        <a href="#" class="link-btn">Growth Tips</a>
-                    </article>
-                    <article class="glass-card reveal-card">
-                        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-                        <h3>Gaming News</h3>
-                        <p>Stay updated with the latest in esports, new releases, and tech leaks.</p>
-                        <a href="#" class="link-btn">View Updates</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="setup" class="skills">
-            <div class="container">
-                <h2 class="section-title">My Battle Station</h2>
-                <div class="skills-wrapper">
-                    <div class="skill-card">
-                        <h3><i class="fa-solid fa-desktop"></i> PC Specs</h3>
-                        <ul class="setup-list">
-                            <li><strong>GPU:</strong> RTX 30-Series (Edit Ready)</li>
-                            <li><strong>Monitor:</strong> 144Hz IPS Panel</li>
-                            <li><strong>Peripheral:</strong> Mechanical Retro-style Keyboard</li>
-                        </ul>
+        <div class="build-tier">
+            <h3 class="tier-title"><i class="fa-solid fa-video"></i> Pro Creator Tier</h3>
+            
+            <div class="build-grid">
+                <article class="build-card">
+                    <div class="card-header amd-theme">
+                        <h4>AMD Workstation</h4>
+                        <span class="price">~₹2,65,000</span>
                     </div>
-                    <div class="skill-card">
-                        <h3><i class="fa-solid fa-mobile-screen"></i> Mobile Gear</h3>
-                        <ul class="setup-list">
-                            <li><strong>Device:</strong> High-Refresh Rate Smartphone</li>
-                            <li><strong>Tools:</strong> External Mic & Stabilizers</li>
-                            <li><strong>Apps:</strong> CapCut / Lightroom Mobile</li>
-                        </ul>
+                    <ul class="specs-list">
+                        <li><i class="fa-solid fa-microchip"></i> <strong>CPU:</strong> Ryzen 9 7950X (16-Core)</li>
+                        <li><i class="fa-solid fa-vr-cardboard"></i> <strong>GPU:</strong> RTX 4080 Super 16GB</li>
+                        <li><i class="fa-solid fa-memory"></i> <strong>RAM:</strong> 64GB DDR5-6000</li>
+                        <li><i class="fa-solid fa-hard-drive"></i> <strong>Storage:</strong> 4TB Gen4 NVMe SSD</li>
+                        <li><i class="fa-solid fa-server"></i> <strong>Mobo:</strong> X670E Motherboard</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="benchmarks.html" class="details-link">Benchmarks & Pros/Cons <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                </div>
-            </div>
-        </section>
+                </article>
 
-        <section id="gallery" class="projects">
-            <div class="container">
-                <h2 class="section-title">Nostalgic Montages</h2>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <div class="project-image">
-                           <i class="fa-solid fa-play-circle"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Nostalgic Feels Edit</h3>
-                            <p>Bringing back the golden age of gaming through cinematic transitions.</p>
-                            <div class="tech-tags">
-                                <span>After Effects</span><span>Vibes</span>
-                            </div>
-                            <a href="https://www.instagram.com/retroashu/" target="_blank" class="btn-sm">Watch Reel <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-image">
-                           <i class="fa-solid fa-fire"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>High-Octane Montage</h3>
-                            <p>Fast-paced gaming clips synced to the beat. Learn how I sync audio.</p>
-                            <div class="tech-tags">
-                                <span>CapCut</span><span>Syncing</span>
-                            </div>
-                            <a href="https://www.instagram.com/retroashu/" target="_blank" class="btn-sm">Watch Reel <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Build Something</h2>
-                <div class="contact-layout">
-                    <div class="contact-left">
-                        <h3>Collaborate with Retroashu</h3>
-                        <p>Looking for an editor? Want to sponsor a video? Or just need setup advice? Drop a message below.</p>
-                        <div class="info-card">
-                            <i class="fa-brands fa-instagram"></i>
-                            <a href="https://instagram.com/Retroashu">DM on Instagram</a>
-                        </div>
+                <article class="build-card">
+                    <div class="card-header intel-theme">
+                        <h4>Intel Masterpiece</h4>
+                        <span class="price">~₹3,50,000</span>
                     </div>
-
-                    <div class="contact-right">
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" id="name" required placeholder=" ">
-                                <label for="name">Gamertag / Name</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" required placeholder=" ">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" rows="5" required placeholder=" "></textarea>
-                                <label for="message">What's on your mind?</label>
-                            </div>
-                            <button type="submit" class="btn primary">Send Signal <i class="fa-solid fa-paper-plane"></i></button>
-                        </form>
+                    <ul class="specs-list">
+                        <li><i class="fa-solid fa-microchip"></i> <strong>CPU:</strong> Core i9-14900K (24-Core)</li>
+                        <li><i class="fa-solid fa-vr-cardboard"></i> <strong>GPU:</strong> RTX 4090 24GB</li>
+                        <li><i class="fa-solid fa-memory"></i> <strong>RAM:</strong> 64GB DDR5-6400</li>
+                        <li><i class="fa-solid fa-hard-drive"></i> <strong>Storage:</strong> 4TB Gen4 NVMe SSD</li>
+                        <li><i class="fa-solid fa-server"></i> <strong>Mobo:</strong> Z790 Motherboard</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="benchmarks.html" class="details-link">Benchmarks & Pros/Cons <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <img src="images/logo.PNG" alt="Retroashu Logo" class="footer-img-logo">
-            </div>
-            <div class="copyright">
-                <p>© 2026 Retroashu | Keep Gaming, Keep Creating</p>
-            </div>
-            <nav class="footer-links">
-                <a href="#">Setup Guide</a>
-                <a href="#">Brand Assets</a>
-            </nav>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+    </div>
+</section>
+   <!-- Build section ends -->
+
+   <!-- Information section starts -->
+   <section id="contact" class="section-padding bg-white">
+    <div class="container">
+        <div class="section-header center-text fade-slide-up">
+            <h2>Let's <span>Collaborate</span></h2>
+            <p>Got a project, sponsorship, or just want to play a few rounds? Drop a message below.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <div class="contact-info fade-slide-up delay-1">
+                <div class="info-card-small">
+                    <div class="icon-circle-small"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4>Email Me</h4>
+                        <p>ashutoshsingh93541@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="info-card-small">
+                    <div class="icon-circle-small"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                </div>
+
+                <h4 class="social-heading">Connect on Socials</h4>
+                <div class="contact-socials">
+                    <a href="#" class="social-box instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-box youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" class="social-box discord">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Discord</span>
+                    </a>
+                    <a href="#" class="social-box github">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper fade-slide-up delay-2">
+                <form action="#" class="contact-form">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Video Editing Collab" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <img src="images/logo.png" alt="Retroashu logo" width="200px">
+            <p>Bridging the gap between just playing and pro creating. Let's build something epic.</p>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#viral-reels">Showcase</a></li>
+                <li><a href="#creator-tips">Creator Tips</a></li>
+                <li><a href="#tech-gear">PC Builds</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-legal">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 RetroAshu. All rights reserved.</p>
+    </div>
+</footer>
+    <!-- Information section ends -->
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+       particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50, /* Adjust for more/less particles */
+                "density": { "enable": true, "value_area": 800 }
+            },
+            "color": {
+                "value": ["#3b82f6", "#8b5cf6"] /* Matches your Blue & Violet theme */
+            },
+            "shape": {
+                "type": "circle",
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#8b5cf6",
+                "opacity": 0.3,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2, /* Slow, elegant floating */
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab" /* Particles reach out to your cursor */
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push" /* Clicking adds more particles */
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 180,
+                    "line_linked": { "opacity": 0.8 }
+                },
+                "push": {
+                    "particles_nb": 4
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
 </body>
 </html>
