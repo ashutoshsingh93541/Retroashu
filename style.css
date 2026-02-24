@@ -1225,6 +1225,15 @@ header {
         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         display: none; /* Hidden by default on mobile */
     }
+
+    /* Centers the social section on mobile */
+    .social-heading {
+        text-align: center;
+    }
+    
+    .contact-socials {
+        justify-content: center;
+    }
     
     /* This class will be toggled by JavaScript to show the menu */
     #nav-menu.active { display: flex; } 
@@ -1323,4 +1332,76 @@ header {
     /* Make the Marquee fit nicely */
     .marquee-content span { font-size: 0.85rem; }
     .marquee-content { gap: 1.5rem; padding-left: 1.5rem; }
+}
+
+/* =========================================
+   HOMEPAGE ULTIMATE MOBILE PATCH
+   ========================================= */
+
+@media (max-width: 850px) {
+    /* 1. Fix the Navbar & Topbar crowding */
+    .nav-actions .menu-toggle {
+        display: none !important; /* Hides 'Collaborate' to make room for hamburger */
+    }
+    .navbar { 
+        padding: 15px 5%; 
+    }
+    .navbar img { 
+        max-width: 160px !important; 
+        height: auto; 
+    }
+    .topbar { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 8px; 
+        padding: 10px 5%; 
+    }
+    .topbar p { 
+        word-break: break-all; 
+        font-size: 13px; 
+    }
+
+    /* 2. Viral Reels - Make it Swipeable on Mobile */
+    .reels-slider-container {
+        overflow-x: auto; /* Enables native touch swiping */
+        -webkit-overflow-scrolling: touch; /* Smooth iOS scrolling */
+        scroll-snap-type: x mandatory; /* Snaps to cards perfectly */
+        padding: 10px 5% 30px; /* Adds padding so cards don't touch screen edges */
+        
+        /* Hide scrollbar for a clean UI */
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+    }
+    
+    .reels-slider-container::-webkit-scrollbar { 
+        display: none; 
+    }
+
+    .slider-track {
+        animation: none !important; /* Disables the infinite auto-scroll on phones */
+        padding: 0;
+        gap: 15px;
+    }
+
+    .reel-card {
+        scroll-snap-align: center; /* Snaps cards to the center of the screen when swiping */
+        width: 220px; /* Slightly smaller to fit mobile screens better */
+        height: 390px;
+    }
+
+    /* 3. Center the Contact Socials */
+    .social-heading { 
+        text-align: center; 
+    }
+    .contact-socials { 
+        justify-content: center; 
+    }
+}
+
+/* For extremely small phones */
+@media (max-width: 600px) {
+    .reel-card {
+        width: 180px;
+        height: 320px;
+    }
 }
