@@ -1190,15 +1190,11 @@ header {
    TABLETS & SMALL LAPTOPS (Max Width: 1024px)
    ----------------------------------------- */
 @media (max-width: 1024px) {
-    .hero {
-        min-height: auto;
-        padding: 4rem 5%;
-    }
+    .hero { min-height: auto; padding: 4rem 5%; }
     .tagline { font-size: 3.2rem; }
     .hero-visual img { width: 300px; height: 300px; }
     .hero-visual::before { width: 310px; height: 310px; }
     
-    /* Adjust floating cards so they don't break the layout */
     .tag-1 { top: 5%; right: 2%; }
     .tag-2 { bottom: 5%; left: 45%; }
 }
@@ -1207,10 +1203,28 @@ header {
    MOBILE & TABLET PORTRAIT (Max Width: 850px)
    ----------------------------------------- */
 @media (max-width: 850px) {
-    /* Navbar Adjustments */
-    .navbar { padding: 1rem 5%; }
+    /* CRITICAL FIX: Global Mobile Prevent Scroll Bleed */
+    html, body { overflow-x: hidden; width: 100%; }
+
+    /* Topbar & Navbar Fixes */
+    .topbar { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 8px; 
+        padding: 10px 5%; 
+    }
+    .topbar p { 
+        word-break: break-all; /* Forces the long email to wrap safely */
+        font-size: 13px; 
+    }
     
-    /* Hide the standard menu and prepare it for a mobile dropdown */
+    .navbar { padding: 15px 5%; }
+    .navbar img { max-width: 160px; height: auto; }
+    
+    .nav-actions .menu-toggle { display: none !important; /* Hides 'Collaborate' to make room for hamburger */ }
+    .hamburger { display: block; }
+    
+    /* Mobile Dropdown Menu */
     #nav-menu {
         position: absolute;
         top: 100%;
@@ -1223,56 +1237,60 @@ header {
         padding: 2rem 0;
         gap: 1.5rem;
         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        display: none; /* Hidden by default on mobile */
+        display: none;
     }
-
-    /* Centers the social section on mobile */
-    .social-heading {
-        text-align: center;
-    }
-    
-    .contact-socials {
-        justify-content: center;
-    }
-    
-    /* This class will be toggled by JavaScript to show the menu */
     #nav-menu.active { display: flex; } 
-    
-    .hamburger { display: block; }
-    .nav-actions { display: flex; align-items: center; }
-    
-    /* Stack the Hero Section Vertically */
+
+    /* Hero Section Stacking */
     .hero {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-            "greet"
-            "content"
-            "visual";
+        grid-template-areas: "greet" "content" "visual";
         text-align: center;
         justify-items: center;
         gap: 2rem;
         padding-top: 3rem;
     }
-    
     .greet { justify-self: center; align-self: center; }
     .hero-content { align-self: center; }
-    
-    /* Button spacing for mobile */
     .hero-content a { margin: 0.5rem; display: inline-block; }
-    
-    /* Hide floating elements on mobile to keep the screen clean */
     .float-card { display: none; } 
+
+    /* Swipeable Viral Reels - The Ultimate 2-Card Fix */
+    .reels-slider-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        /* Kept the 5% left padding to align with your brand, but removed right padding so it touches the edge */
+        padding: 10px 0 30px 5%; 
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+        scroll-behavior: smooth; 
+    }
     
-    /* Stack Contact and Footer Grids */
-    .contact-grid { 
-        grid-template-columns: 1fr; 
-        gap: 30px; 
+    .reels-slider-container::-webkit-scrollbar { display: none; }
+    
+    .slider-track {
+        animation: none !important; 
+        padding: 0;
+        gap: 15px;
     }
-    .footer-grid { 
-        grid-template-columns: 1fr; 
-        text-align: center; 
-        gap: 30px; 
+    
+    .reel-card {
+        scroll-snap-align: start; 
+        flex-shrink: 0;
+        /* The Math: (100% Screen Width - 5% Left Padding - 15px Gap) divided by 2 */
+        width: calc(47.5vw - 7.5px); 
+        max-width: none; /* REMOVED: Allows cards to perfectly fill the screen to hide the 3rd card */
+        height: auto; 
+        aspect-ratio: 9 / 16; /* Automatically keeps the perfect vertical Reel shape no matter the width! */
     }
+
+    /* Contact & Footer Stacking */
+    .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+    .social-heading { text-align: center; }
+    .contact-socials { justify-content: center; }
+    
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
     .footer-links ul, .footer-legal ul { align-items: center; }
     .footer-brand { margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
 }
@@ -1281,127 +1299,56 @@ header {
    SMALL MOBILE PHONES (Max Width: 600px)
    ----------------------------------------- */
 @media (max-width: 600px) {
-    /* Fix the long email stretching the screen */
-    .topbar { 
-        flex-direction: column; 
-        gap: 8px; 
-        padding: 12px 5%; 
-        text-align: center; 
-    }
-    
-    .topbar p {
-        word-break: break-all; /* Forces the long email to wrap */
-        font-size: 13px;
-        padding: 0 10px;
-    }
-    
-    /* Scale down logo and adjust navbar padding */
-    .navbar {
-        padding: 1rem 5%;
-    }
-
-    .navbar img {
-        width: 160px !important; /* Forces logo to scale down from 200px */
-        height: auto;
-    }
-    
-    /* Scale down hero elements */
-    .hero {
-        padding: 2rem 5%;
-    }
-
-    .tagline { 
-        font-size: 2.2rem; 
-        line-height: 1.2;
-    }
-
+    /* Scale down hero text and images */
+    .hero { padding: 2rem 5%; }
+    .tagline { font-size: 2.2rem; line-height: 1.2; }
     .hero-content p { font-size: 0.95rem; }
     .hero-visual img { width: 240px; height: 240px; }
     .hero-visual::before { width: 250px; height: 250px; }
     
-    /* Reduce large gaps between sections */
     .section-padding { padding: 4rem 0; }
     .center-text h2 { font-size: 2rem; margin-bottom: 1rem; }
     
-    /* Stack form inputs */
-    .input-row { 
-        grid-template-columns: 1fr; 
-        gap: 0; 
-    }
+    .input-row { grid-template-columns: 1fr; gap: 0; }
     
-    /* Make the Marquee fit nicely */
     .marquee-content span { font-size: 0.85rem; }
     .marquee-content { gap: 1.5rem; padding-left: 1.5rem; }
+    
+    .reel-card { width: 180px; height: 320px; }
 }
 
 /* =========================================
-   HOMEPAGE ULTIMATE MOBILE PATCH
+   IPHONE ALIGNMENT & OVERFLOW PATCHES
    ========================================= */
 
-@media (max-width: 850px) {
-    /* 1. Fix the Navbar & Topbar crowding */
-    .nav-actions .menu-toggle {
-        display: none !important; /* Hides 'Collaborate' to make room for hamburger */
-    }
-    .navbar { 
-        padding: 15px 5%; 
-    }
-    .navbar img { 
-        max-width: 160px !important; 
-        height: auto; 
-    }
-    .topbar { 
-        flex-direction: column; 
-        text-align: center; 
-        gap: 8px; 
-        padding: 10px 5%; 
-    }
-    .topbar p { 
-        word-break: break-all; 
-        font-size: 13px; 
-    }
-
-    /* 2. Viral Reels - Make it Swipeable on Mobile */
-    .reels-slider-container {
-        overflow-x: auto; /* Enables native touch swiping */
-        -webkit-overflow-scrolling: touch; /* Smooth iOS scrolling */
-        scroll-snap-type: x mandatory; /* Snaps to cards perfectly */
-        padding: 10px 5% 30px; /* Adds padding so cards don't touch screen edges */
-        
-        /* Hide scrollbar for a clean UI */
-        -ms-overflow-style: none; 
-        scrollbar-width: none; 
-    }
-    
-    .reels-slider-container::-webkit-scrollbar { 
-        display: none; 
-    }
-
-    .slider-track {
-        animation: none !important; /* Disables the infinite auto-scroll on phones */
-        padding: 0;
-        gap: 15px;
-    }
-
-    .reel-card {
-        scroll-snap-align: center; /* Snaps cards to the center of the screen when swiping */
-        width: 220px; /* Slightly smaller to fit mobile screens better */
-        height: 390px;
-    }
-
-    /* 3. Center the Contact Socials */
-    .social-heading { 
-        text-align: center; 
-    }
-    .contact-socials { 
-        justify-content: center; 
-    }
+/* 1. Absolute kill-switch for iOS horizontal sliding */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
 }
 
-/* For extremely small phones */
-@media (max-width: 600px) {
-    .reel-card {
-        width: 180px;
-        height: 320px;
+/* 2. Fix the Contact Card Email breaking out of the box */
+.info-card-small {
+    max-width: 100%;
+    overflow: hidden; 
+}
+
+.info-card-small p {
+    word-break: break-all; /* Forces the long email to wrap to the next line */
+    overflow-wrap: break-word;
+}
+
+/* 3. Fix Topbar Centering & Text Sizing for Mobile */
+@media (max-width: 850px) {
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important; /* Magnetically pulls email and icons to the dead center */
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .info-card-small p {
+        font-size: 0.95rem; /* Slightly scales down the email text so it fits beautifully */
     }
 }
